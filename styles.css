@@ -1,0 +1,42 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+button {
+    background-color: black;
+    color: aqua;
+    margin: 25px;
+    padding: 10px;
+}
+
+.nameFields{
+    display: flex;
+    flex-direction: row;
+}
+
+label, input{
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+input{
+    border: 2px solid black;
+    height: 2rem;
+    padding: 5px;
+    
+}
+
+#alertContainer{
+    max-width: 70%;
+    max-height: 20%;
+    
+}
+#alertContainer, p{
+    margin: 5px;
+    border: 1px solid black;
+}
+

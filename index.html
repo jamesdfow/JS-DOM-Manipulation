@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <button>James Button</button>
+  <button id = "jamesButton" >James Button </button>
+<div class="nameFields">
+        <label for="fname">First Name</label>
+        <input type="text" placeholder="Enter first name" id="fname">
+        <br><br>
+
+        <label for="lname">Last Name</label>
+        <input type="text" placeholder="Enter last name" id="lname">
+        <button id="inputButton" class="inputButton">Submit</button>
+      </div>
+
+  <div id="weatherDisplay">
+    <h1>Weather Display</h1>
+    <button id="fetchBtn">Get Weather Alerts</button>
+    <div id="alertContainer">
+      <!--JS Content will go here-->
+    </div>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>

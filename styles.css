@@ -40,3 +40,7 @@ input{
     border: 1px solid black;
 }
 
+.formContainer {
+    border: 1px dashed black;
+    margin: 10px;
+}

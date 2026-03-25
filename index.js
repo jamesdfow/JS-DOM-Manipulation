@@ -4,6 +4,9 @@ const lastName = document.getElementById("lname");
 const button = document.querySelector("button");
 const weatherButton = document.querySelector("#fetchBtn");
 const weatherContainer = document.querySelector("#alertContainer")
+const transpoButton = document.getElementById("#transpoButton");
+
+
 
 button.addEventListener('click', function() {
     if(button.innerText == "James button"){
@@ -26,6 +29,17 @@ weatherButton.addEventListener("click", function() {
     });
 });
 
+// transpoButton.addEventListener("click", function(){
+//     if()
+// });
+
+function displayRadioValue (){
+    let element = document.getElementsByName('vehicle');
+    for (let i = 0; i < element.length; i++){
+        if(element[i].checked)
+            document.getElementById("result").innerHTML = "Interesting choice: " + element[i].value;
+    }
+}
 
 
 

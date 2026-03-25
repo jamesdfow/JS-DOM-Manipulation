@@ -26,6 +26,26 @@
       <!--JS Content will go here-->
     </div>
   </div>
+
+  <div class="formContainer" id="formContainer">
+    <form action="">
+      <h2>Favorite mode of transportation</h2>
+      <div class="inputContainer">
+
+          <input type="radio" id="vehicle1" name="vehicle" value="Bike"> Bike
+          
+          <input type="radio" id="vehicle2" name="vehicle" value="Car"> Car
+          
+          <input type="radio" id="vehicle3" name="vehicle" value="PublicTransport"> Public Transport
+          <br>
+          <br>
+          <button type="button" onclick="displayRadioValue()">Submit</button>
+          <br>
+          <div id="result"></div>
+      </div>
+    </form>
+
+  </div>
   <script src="index.js"></script>
 </body>
 </html>

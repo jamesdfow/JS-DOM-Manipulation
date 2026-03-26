@@ -37,7 +37,7 @@ function displayRadioValue (){
     let element = document.getElementsByName('vehicle');
     for (let i = 0; i < element.length; i++){
         if(element[i].checked)
-            document.getElementById("result").innerHTML = "Interesting choice: " + element[i].value;
+            document.getElementById("result").innerHTML = "Good choice " + element[i].value;
     }
 }
 

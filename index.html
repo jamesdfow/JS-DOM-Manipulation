@@ -8,6 +8,20 @@
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
+
+<div class="liveFilterContainer">
+  <h2>Live Filter/Search</h2>
+  <br><br>
+  <label for="searchBar">Search your city here:</label>
+    <input type="search" name="searchBar" id="searchBar">
+    <button type="button">Search</button>
+    <br><br>
+    <div class="searchResultsContainer">
+      <!--search results will show up here-->
+    </div>
+
+</div>
   <button id = "jamesButton" >James Button </button>
 <div class="nameFields">
         <label for="fname">First Name</label>
@@ -19,7 +33,18 @@
         <button id="inputButton" class="inputButton">Submit</button>
       </div>
 
-  <div id="weatherDisplay">
+  <section class="todoList">
+      <input type="text" name="todoInput" id="todoInput" placeholder="ex: pcik up apples">
+      <button class="inputButton" id="addTodo" type="button">Add to To-Do list</button>
+      <button class="inputButton" id="deleteTodo" type="button">Delete Last Item</button>
+      <br><br>
+
+      <div class="todoDisplayContainer">
+      
+      </div>
+  </section>
+
+      <div id="weatherDisplay">
     <h1>Weather Display</h1>
     <button id="fetchBtn">Get Weather Alerts</button>
     <div id="alertContainer">
@@ -29,12 +54,12 @@
 
   <div class="formContainer" id="formContainer">
     <form action="">
-      <h2>Does Erica Need to Lock In?</h2>
+      <h2>is Bammer 6 a silly pacific island papi?!</h2>
       <div class="inputContainer">
 
-          <input type="radio" id="vehicle1" name="vehicle" value="Bike"> Yes, but with extra text
+          <input type="radio" id="vehicle1" name="vehicle" value="Good, you realized"> Yes, but with extra text
           
-          <input type="radio" id="vehicle2" name="vehicle" value="Car"> Yes
+          <input type="radio" id="vehicle2" name="vehicle" value="Good"> Yes
           
           <!-- <input type="radio" id="vehicle3" name="vehicle" value="PublicTransport"> Public Transport -->
           <br>
@@ -46,6 +71,8 @@
     </form>
 
   </div>
+
+
   <script src="index.js"></script>
 </body>
 </html>

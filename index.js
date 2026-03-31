@@ -20,7 +20,12 @@ const cityArray = [
     'redmond', 'salt lake city'
 ];
 const searchBarInput = document.getElementById("searchBar");
+const countyInput = document.getElementById("inputCounty");
+const countyDisplayContainer = document.querySelector("#countyDisplay");
+const countyButton = document.getElementById("countyButton");
 const searchResultsContainer = document.querySelector(".searchResultsContainer");
+
+
 searchBarInput.addEventListener('input', () => {
     let searchTerm = searchBarInput.value.toLowerCase();
     if(searchBarInput.value === '') return;
@@ -28,6 +33,39 @@ searchBarInput.addEventListener('input', () => {
     searchResultsContainer.innerHTML = results.map(item => `<li>${item}</li>`).join('');
 })
 
+countyButton.addEventListener('click', () => {
+    const zip = document.getElementById('inputCounty').value.trim();
+    if (!/^\d{5}$/.test(zip)) {
+        displayResult("Please enter a valid 5-digit ZIP Code.");
+        return;
+    }
+    fetchCountyByZipCode(zip);
+})
+
+async function fetchCountyByZipCode(zip) {
+    const url = `https://geocoding.geo.census.gov/geocoder/geographies/address?benchmark=Public_AR_Current&vintage=Current_Current&format=json&zip=${zip}`
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const matches = data.result.addressMatches;
+
+        if(matches.length === 0) {
+            displayResult('No county found for that ZIP Code');
+            return;
+        }
+        const county = matches[0].geographies['Counties'][0].NAME;
+        const state = matches[0].geographies['States'][0].NAME;
+        displayResult(`${county}, ${state}`);
+    }catch(error){
+        displayResult('Something went wrong. Please try again.');
+        console.error(error);
+    }
+}
+function displayResult(message){
+    document.getElementById('countyDisplay').textContent = message;
+}
 
 
 // button.addEventListener('click', function() {
